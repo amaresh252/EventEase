@@ -1,0 +1,29 @@
+#user-order{
+    background-color: #bee3e2;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#order-img{
+    padding: 0 46px;
+    max-height: 200px;
+    max-width: 200px;
+    margin-bottom: 12px;
+}
+
+#order-item{
+    text-align: center;
+}
+#order-price{
+    text-align: right;
+}
+
+#order-total-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+#order-address-part2{
+    text-align: right;
+
+}

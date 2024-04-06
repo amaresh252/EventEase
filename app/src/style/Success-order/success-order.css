@@ -1,0 +1,8 @@
+.success-order-title{
+    color: #17ac9d;
+    font-size:60px;
+    font-weight: 700;
+}
+.success-order{
+    background-image: url("../../../public/images/bgimage.jpg");
+}

@@ -1,0 +1,40 @@
+#sidebar-wrapper{
+    min-width: 150px;
+    background-color: #17ac9d;
+}
+#vendor-items{
+    padding: 18px 0;
+    background-color: #e3f3f3;
+}
+#vendor-background{
+   background-image: url("../../../public/images/bgimage.jpg");
+}
+
+
+#vendor-item-heading{
+   padding-top: 8px;
+   display: flex;
+   flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+}
+
+#vendor-item-delete{
+   padding-top: 8px;
+   display: flex;
+   flex-direction: column;
+  justify-content:space-between;
+}
+#vendor-item-price{
+   padding-top: 8px;
+   display: flex;
+   flex-direction: column;
+  justify-content:space-between;
+}
+
+#vendor-addproduct{
+   background-color: #e3f3f3;
+}
+#vendor-updateproduct{
+   background-color: #e3f3f3;
+}

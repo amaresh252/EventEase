@@ -1,0 +1,20 @@
+.login-btn{
+    border: none;
+    background-color: #09b153;
+    color: white;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.login-title{
+    border-bottom: 3px solid #09b153;
+    color: #17ac9d;
+}
+.main{
+    background-image: url("../../../public/images/bgimage.jpg");
+}
+.login-link{
+    color: #17ac9d;
+}
+.heading{
+    font-size: 2.2rem;
+}

@@ -1,0 +1,14 @@
+#vendornav{
+    padding: 0;
+    margin-left: 2px;
+    border: double#17ac9d;
+    
+}
+
+#vendor-nav{
+    height: 65px;
+}
+
+.vendor-nav-inside{
+    background-color: #17ac9d;
+}

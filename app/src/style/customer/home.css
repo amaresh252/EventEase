@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+      
+}
+
+#cardimgtop1{
+    height:260px;
+   
+    padding: 15px;
+}
+
+#card1{
+    background-color: #17ac9d;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+ 
+}
+
+#cardbody1{
+    padding-left: 25px;
+    padding-right: 25px;
+   
+}
+#cardtitle1{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+#addcartbtn1{
+    border-radius: 3px;
+    width: 80%;
+    background-color: #0dc043;
+    border:none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+#addcartbtn1:hover{
+    background-color: yellowgreen;
+    border: none;
+}
+
+#cardprice1{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+#heading-item-type{
+    background-color: beige;
+    color: aquamarine;
+}
+
+
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    -webkit-background-size:cover;
+    background-size: cover;
+}
+.carousel-item::before{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.2;
+}
+
+
+.carousel-item-text{
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    right: 0;
+    top:150px;
+}
+
+.carousel-cap h5{
+     font-size: 60px;
+     font-weight: 500;
+     color: #17ac9d;
+}
+
+.carousel-cap p{
+    font-size: 35px;
+    top: 2rem;
+    color: #d3e3fd;
+   
+}
+.home-whole{
+    background-image: url("../../../public/images/bgimage.jpg");
+    
+}
+.home-type{
+   color: #ab9476;
+}
+.category-heading{
+    color: #ab9476;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+

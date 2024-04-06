@@ -1,0 +1,33 @@
+
+
+
+#customer-current-items{
+     padding: 18px 0;
+    background-color: #e3f3f3;
+}
+
+#current-item-image{
+    padding: 6px 56px;
+   border-radius: 20px;
+}
+
+#current-item-heading{
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+   justify-content:space-between;
+}
+
+#current-item-address{
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+   justify-content:space-between;
+}
+#current-item-status{
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+   justify-content:space-between;
+}
+

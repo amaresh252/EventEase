@@ -1,0 +1,26 @@
+@media (max-width:991px) {
+    .sidebar{
+        background-color: #17ac9d;
+        /* #0dcaf0 */
+    }
+}
+
+#customer-nav{
+   height: 100px;
+   background-color: #17ac9d;
+}
+#customer-nav-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+#customer-nav-brand{
+    font-size: 40px;
+    font-weight: 700;
+}
+.customer-sidebar{
+    background-color: #17ac9d;
+}
+
+
+
+

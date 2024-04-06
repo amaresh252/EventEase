@@ -1,0 +1,36 @@
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+.checkout{
+    background-image: url("../../../public/images/bgimage.jpg");
+    
+}
+
+#checkoutform{
+    margin-top: 22px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #e3f3f3;
+}
+
+#checkout-address{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #e3f3f3;
+    
+}
+#checkout-payment{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #e3f3f3;
+}
+#checkout-address-part{
+    margin-bottom: 10px;
+    border: ridge;
+}
+
+#checkout-data{
+    background-color: #bee3e2;
+}
+#checkout-total{
+    background-color: #bee3e2;
+}
