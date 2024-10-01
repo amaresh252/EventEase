@@ -6,6 +6,7 @@ import { selectLoggedInUser } from "../../auth/AuthSlice";
 import { VendorSidebar } from "../../navbar/VendorSidebar";
 import { VendorNavbar } from "../../navbar/VendorNavbar";
 import '../../style/vendor/product.css'
+import VendorSideFooter from "../../footer/VendorSideFooter";
 export default function UpdateProduct(){
     const {_id}=useParams();
     const numberIndex=_id
@@ -124,6 +125,7 @@ export default function UpdateProduct(){
     </div>
     </div>
   </div>
+  <VendorSideFooter/>
       </div>
     </div>
   </div>

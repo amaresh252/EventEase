@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CustomerNavbar } from "../navbar/CustomerNavbar";
 import "../style/customer/home.css";
+import  CustomerSideFooter from "../footer/CustomerSideFooter";
 
 export default function Home() {
   
@@ -153,6 +154,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <CustomerSideFooter/>
     </div>
   );
 }

@@ -11,10 +11,22 @@
 }
 .main{
     background-image: url("../../../public/images/bgimage.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100vw; 
+    height: 100vh; 
+    
 }
 .login-link{
     color: #17ac9d;
 }
 .heading{
     font-size: 2.2rem;
+}
+.event-plan-img{
+  
+    height: 100%;
+    width: 100%; /* Maintain aspect ratio */
+  
 }

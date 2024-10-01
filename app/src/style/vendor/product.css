@@ -8,6 +8,10 @@
 }
 #vendor-background{
    background-image: url("../../../public/images/bgimage.jpg");
+   background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    z-index: 5;
 }
 
 

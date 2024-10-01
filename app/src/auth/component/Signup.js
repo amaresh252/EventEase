@@ -12,6 +12,7 @@ export default function Signup(){
     const [username,setUsername]=useState('');
     const [password,setPassword]=useState('');
     const [role,setRole]=useState('');
+    const [errors, setErrors] = useState({});
     
     function handleusername(e){
         setUsername(e.target.value);
@@ -24,7 +25,28 @@ export default function Signup(){
     }
     function handleSubmit(e){
         e.preventDefault();
+        let formErrors = {};
+        const trimmedEmail = username.trim();
+        const trimmedPassword = password.trim();
+        const trimmedRole = role.trim();
+        if (!trimmedEmail) {
+          formErrors.username = 'username is required';
+        } 
+        if (!trimmedRole) {
+            formErrors.role = 'please select role';
+          } 
+        if (!trimmedPassword) {
+            formErrors.password = 'Password is required';
+          } else if (trimmedPassword.length < 3) {
+            formErrors.password = 'Password must be at least 3 characters';
+          }
+          if(Object.keys(formErrors).length>0){
+            setErrors(formErrors)
+          }
+          else{
+            setErrors({})
         dispatch(createUserAsync({username:username,password:password,role:role}));
+          }
     }
     useEffect(() => {
         if (user) {
@@ -43,10 +65,12 @@ export default function Signup(){
                     <div className="form-floating mb-3">
                     <input id="username" className="form-control" type="email" name="username" value={username} onChange={handleusername} autoComplete="username"></input>
                     <label htmlFor="username">UserName</label>
+                    {errors.username && <p style={{ color: 'red' }}>{errors.username}</p>}
                     </div>
                     <div className="form-floating mb-3">
                     <input id="password" className="form-control" type="password" name="password" value={password} onChange={handlepassword} autoComplete="current-password"></input>
                     <label htmlFor="password">Password</label>
+                    {errors.password && <p style={{ color: 'red' }}>{errors.password}</p>}
                     </div>
                     <div className="form-floating mb-3">
                     <select type='role' className="form-control" id="role" value={role} onChange={handlerole}>
@@ -56,6 +80,7 @@ export default function Signup(){
                         {/* <option type='admin'>Admin</option> */}
                     </select>
                     <label htmlFor="role">Role</label>
+                    {errors.role && <p style={{ color: 'red' }}>{errors.role}</p>}
                     </div>
                     <div className="text-center">
                     <button  className="signup-btn py-3 rounded-3" type="submit">SignUp</button>
@@ -66,7 +91,7 @@ export default function Signup(){
                     </div>
                 </form>
                 <div className="col-6">
-                    <img src="event-plan.jpg" className="img-fluid"/>
+                    <img src="event-plan.jpg" className="img-fluid event-plan-img"/>
                 </div>
             </div>
         </div>

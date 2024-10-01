@@ -38,7 +38,6 @@ export function loginUser(userData){
             });
             if(response.ok){
               const data = await response.json();
-            
             resolve({data})
             }
             else  {

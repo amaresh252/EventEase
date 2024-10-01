@@ -1,14 +1,17 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchAllProductAsync, selectAllProduct ,deleteProductAsync} from "../AddProductSlice";
+import { fetchAllProductAsync, selectAllProduct ,deleteProductAsync,selectProductStatus} from "../AddProductSlice";
 import {Link, useNavigate} from 'react-router-dom'
 import { selectLoggedInUser } from "../../auth/AuthSlice";
 import NotFoundPath from "../../NotFoundPath";
 import { VendorSidebar } from "../../navbar/VendorSidebar";
 import { VendorNavbar } from "../../navbar/VendorNavbar";
 import '../../style/vendor/product.css'
+import { Buffer } from "../../page/Buffer";
+import VendorSideFooter from "../../footer/VendorSideFooter";
 export default function Product() {
   const dispatch = useDispatch();
+  const status=useSelector(selectProductStatus);
   const products = useSelector(selectAllProduct);
   const user=useSelector(selectLoggedInUser)
   const  navigate =useNavigate();
@@ -37,7 +40,8 @@ export default function Product() {
     <div className='col' style={{'padding':'0' }}>
     <VendorNavbar pagetitle={pagetitle} />
     <div className='px-3'>
-   
+      
+  {status!='loading' ?
   <div className='container-fluid '>
     <div className='row g-3 pt-5 my-2 justify-content-center'>
       <div className="col-md-12 col-sm-12 ">
@@ -76,8 +80,11 @@ export default function Product() {
       </div>
       </div>
     </div>
+    :<div className="mt-4 pt-4"><Buffer/></div>
+  }
    
   </div>
+  <VendorSideFooter/>
 </div>
     </div>
   </div>

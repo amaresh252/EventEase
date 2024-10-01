@@ -4,6 +4,7 @@ import { fetchUserOrderAsync, selectUserOrder } from "../OrderSlice";
 import { useEffect } from "react";
 import { CustomerNavbar } from "../../navbar/CustomerNavbar";
 import '../../style/order/customerorder.css'
+import CustomerSideFooter from "../../footer/CustomerSideFooter";
 
 export default function CustomerOrder(){
     const orders=useSelector(selectUserOrder);
@@ -86,7 +87,7 @@ export default function CustomerOrder(){
            ))
          )
        }
-      
+      <CustomerSideFooter/>
        
         </div>
     )

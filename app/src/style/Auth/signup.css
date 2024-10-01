@@ -16,3 +16,9 @@
 .signup-link{
     color: #17ac9d;
 }
+.event-plan-img{
+  
+        height: 100%;
+        width: 100%; /* Maintain aspect ratio */
+      
+}

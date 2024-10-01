@@ -20,7 +20,25 @@
 .customer-sidebar{
     background-color: #17ac9d;
 }
-
+.customer_cart_icon{
+    position: relative;
+}
+.customer_cart_number{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size:smaller;
+    height: 42%;
+    color:#fff;
+    padding: 0 5px;
+    background-color: #f70606;
+    right: 0;
+    top: -1px;
+    border-radius: 20%;
+    border: solid;
+    border-width: 1px;
+}
 
 
 

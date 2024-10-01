@@ -5,11 +5,14 @@ import { Link } from 'react-router-dom';
 import { VendorSidebar } from '../../navbar/VendorSidebar';
 import { VendorNavbar } from '../../navbar/VendorNavbar';
 import '../../style/vendor/product.css'
+import { selectProductStatus } from '../AddProductSlice';
+import { Buffer } from '../../page/Buffer';
+import VendorSideFooter from '../../footer/VendorSideFooter';
 
 export const VenderSideCustomerOrder = () => {
   const order=useSelector(selectVendorSideOrder);
       const  dispatch=useDispatch();       
-    
+    const status=useSelector(selectProductStatus);
     const pagetitle='Orders';
     useEffect(()=>{
         dispatch(fetchVendorSideOrderAsync())
@@ -30,7 +33,7 @@ export const VenderSideCustomerOrder = () => {
        <div className='col' style={{'padding':'0' }}>
        <VendorNavbar pagetitle={pagetitle} />
        <div className='px-3'>
-    
+       {status!='loading' ?
      <div className='container-fluid'>
        <div className='row g-3 pt-5 my-2'>
        <div className="col-md-12  ">
@@ -47,7 +50,7 @@ export const VenderSideCustomerOrder = () => {
     </tr>
   </thead>
        {
-        order && order.length>0 &&
+        order && order.length>0 ?
         (order.map((item)=>(
               <tbody  key={item._id}>
                 <tr>
@@ -61,13 +64,14 @@ export const VenderSideCustomerOrder = () => {
                   </tbody>
             
            
-        )))
+        ))):<p>Currently There Is No Orders Available</p>
     }
      </table>
      </div>
        </div>
-     </div>
+     </div>:<div className='mt-4 pt-4'><Buffer/></div>}
    </div>
+   <VendorSideFooter/>
        </div>
      </div>
    </div>

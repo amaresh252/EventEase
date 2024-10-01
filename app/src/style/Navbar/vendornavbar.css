@@ -2,7 +2,7 @@
     padding: 0;
     margin-left: 2px;
     border: double#17ac9d;
-    
+    z-index: 10;
 }
 
 #vendor-nav{

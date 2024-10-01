@@ -47,7 +47,7 @@ export const checkAuthAsync = createAsyncThunk(
         const response = await checkAuth();
         return response.data;
       } catch (error) {
-        console.log(error);
+        return isRejected(error);
       }
     }
   );
@@ -57,7 +57,7 @@ export const checkAuthAsync = createAsyncThunk(
             const response = await userInfo();
         return response.data;
         }catch(error){
-            console.log(error);
+            return isRejected(error);
         }
         
      }
@@ -85,6 +85,9 @@ export const authSlice=createSlice({
         })
         .addCase(createUserAsync.fulfilled,(state,action)=>{
             state.status='idle';
+            if(action.payload==false){
+                state.error='Unauthorized'
+            }
             state.loggedInUserToken=action.payload;
         })
         .addCase(createUserAsync.rejected,(state,action)=>{
@@ -96,6 +99,9 @@ export const authSlice=createSlice({
         })
         .addCase(loginUserAsync.fulfilled,(state,action)=>{
             state.status='idle';
+            if(action.payload==false){
+                state.error='Wrong Credential'
+            }
             state.loggedInUserToken=action.payload;
         })
         .addCase(loginUserAsync.rejected,(state,action)=>{
@@ -107,6 +113,7 @@ export const authSlice=createSlice({
         })
         .addCase(signoutAsync.fulfilled,(state,action)=>{
             state.status='idle';
+            state.error=null;
             state.loggedInUserToken=null;
         })
         .addCase(checkAuthAsync.pending, (state) => {

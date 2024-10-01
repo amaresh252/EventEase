@@ -6,6 +6,7 @@ import {  useNavigate } from "react-router-dom";
 import { createOrderAsync,createVendorSideOrderAsync,selectCurrentOrder } from "../order/OrderSlice";
 import { CustomerNavbar } from "../navbar/CustomerNavbar";
 import '../style/cart/checkout.css'
+import CustomerSideFooter from "../footer/CustomerSideFooter";
 export default function Checkout() {
   const dispatch = useDispatch();
   const user = useSelector(selectUserInfo);
@@ -263,7 +264,7 @@ export default function Checkout() {
         </div>
       </div>
      
-
+      <CustomerSideFooter/>
       
     </>
   );

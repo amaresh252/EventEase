@@ -5,6 +5,7 @@ import { fetchSingleVendorSideOrderAsync, updateVendorSideOrderAsync,selectSingl
 import { VendorSidebar } from '../../navbar/VendorSidebar';
 import { VendorNavbar } from '../../navbar/VendorNavbar';
 import '../../style/vendor/product.css'
+import VendorSideFooter from '../../footer/VendorSideFooter';
 
 export const UpdateOrderStatus = () => {
     const dispatch=useDispatch();
@@ -107,6 +108,7 @@ export const UpdateOrderStatus = () => {
     </div>
     </div>
   </div>
+  <VendorSideFooter/>
       </div>
     </div>
   </div>

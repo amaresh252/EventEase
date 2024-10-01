@@ -4,6 +4,7 @@ import { selectUserInfo ,userInfoAsync} from '../auth/AuthSlice'
 import { selectCustomerCurrentOrder,fetchCustomerCurrentOrderAsync } from '../order/OrderSlice';
 import { CustomerNavbar } from '../navbar/CustomerNavbar';
 import '../style/customer/customerprofile.css'
+import CustomerSideFooter from '../footer/CustomerSideFooter';
 
 export const CustomerProfile = () => {
     const dispatch=useDispatch();
@@ -65,6 +66,7 @@ export const CustomerProfile = () => {
         
         </div>
         </div>
+        <CustomerSideFooter/>
     </div>
   )
 }

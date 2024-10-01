@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Link ,Navigate} from "react-router-dom";
 import { CustomerNavbar } from "../navbar/CustomerNavbar";
 import '../style/cart/cart.css'
+import CustomerSideFooter from "../footer/CustomerSideFooter";
 export default function Cart() {
   const dispatch = useDispatch();
 
@@ -70,6 +71,7 @@ const items = useSelector(selectItems);
       
      </div>
 </div>
+<CustomerSideFooter/>
     </div>
   );
 }

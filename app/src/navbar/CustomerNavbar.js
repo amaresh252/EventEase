@@ -1,22 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import  '../style/Navbar/CustomerNavbar.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch} from 'react-redux'
-
+import { useDispatch, useSelector} from 'react-redux'
+import { selectItems,fetchItemsByUserIdAsync } from '../cart/CartSlice'
 
 
 export const CustomerNavbar = () => {
+    
     const dispatch=useDispatch();
     const navigate=useNavigate();
+    const items = useSelector(selectItems);
+    console.log(items.length)
+     const cart_product=items.length;
+    
+    
     function handlesignout(){
         
         navigate('/logout') 
        }
-       
+       useEffect(() => {
+     
+        dispatch(fetchItemsByUserIdAsync());
+      }, [dispatch]);
   return (
     <nav className="navbar navbar-dark navbar-expand-lg  " id='customer-nav' >
   <div className="container " >
-    <div className="navbar-brand   " id='customer-nav-brand' >EventEase</div>
+    <div className="navbar-brand   " id='customer-nav-brand' ><img src="/eve-logo.png" height={45} width={40}/>EventEase</div>
     <button className="navbar-toggler border-0 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -31,7 +40,10 @@ export const CustomerNavbar = () => {
             <Link className="nav-link active " aria-current="page" to="/Customer">Home</Link>
           </li>
           <li className="nav-item">
+            <div className='customer_cart_icon'>
+           {cart_product!=0 && <div className='customer_cart_number'>{cart_product}</div>}
             <Link className="nav-link active " to="/User/cart">Cart</Link>
+            </div>
           </li>
           <li className="nav-item  dropdown">
             <a className="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

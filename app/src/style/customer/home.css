@@ -99,6 +99,9 @@
 }
 .home-whole{
     background-image: url("../../../public/images/bgimage.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
     
 }
 .home-type{
@@ -109,3 +112,27 @@
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
+.add-to-cart-popup{
+    position: fixed;
+    top: 10px;
+    z-index: 10;
+    color: #0dc043;
+    border: double;
+    font-size: x-large;
+    background-color: #b7e1c4;
+    margin-left: 10px;
+    padding: 0 6px;
+    animation: fadeOutInstant 2s forwards;
+    
+}
+@keyframes fadeOutInstant {
+    0% {
+      opacity: 1;
+    }
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
