@@ -59,6 +59,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const CloudinaryUpload=(req,res,next)=>{
+
    if(req.file!=undefined){
   cloudinary.uploader.upload(req.file.path, function (err, result){
       if(err) {
@@ -69,12 +70,13 @@ const CloudinaryUpload=(req,res,next)=>{
         })
       }
        req.file.filename = result.secure_url;
-       
        next()
     })
   }
-  next()
-   
+  else {
+    next()
+  }
+ 
 }
 
 
